@@ -13,11 +13,17 @@
 
 Route::get('/', 'WelcomeController@index');
 
+//Módulo 1 e 2
 Route::get('exemplo', 'WelcomeController@exemplo');
+
+//Módulo 2
+Route::get('admin/categories','AdminCategoriesController@index');
+Route::get('admin/products','AdminProductsController@index');
 
 Route::get('home', 'HomeController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
+    //'admin' => 'Admin\AdminCategoriesController'
 ]);
