@@ -25,6 +25,9 @@ class RouteServiceProvider extends ServiceProvider {
 		//
 		
 		parent::boot($router);
+
+        //Transforma o ID em um objeto.
+        $router->model('category','CodeCommerce\Category');
 	}
 
 	/**
